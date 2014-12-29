@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *temperature;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loading;
+@property (weak, nonatomic) IBOutlet UILabel *labelLoading;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
@@ -44,6 +45,11 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_summer"]];
     //[self.loading startAnimating];
     self.locationManager.delegate = self;
+    [self.loading startAnimating];
+    
+    //添加手势老更新天气信息
+    UITapGestureRecognizer *singlePoint = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSinglePoind)];
+    [self.view addGestureRecognizer:singlePoint];
     
     // 设置定位精确度
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -51,17 +57,22 @@
     [self.locationManager startUpdatingLocation];
 }
 
+- (void)handleSinglePoind
+{
+    [self.locationManager startUpdatingLocation];
+    NSLog(@"in gesture");
+}
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    if (locations[0]) {
-        CLLocation *location  = (CLLocation*)locations[0];
-        //self.teamplatrue.text = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
-        NSLog(@"this in locationManager");
-        [self getWeatherBylocation:location];
+    if ([locations lastObject]) {
+        CLLocation *location  = (CLLocation*)[locations lastObject];
+        if (location.horizontalAccuracy) {
+            NSLog(@"this in locationManager");
+            [self.locationManager stopUpdatingLocation];
+            [self getWeatherBylocation:location];
+        }
     }
-    //[self.loading stopAnimating];
-    [self.loading setHidden:YES];
-    [self.locationManager stopUpdatingLocation];
 }
 
 static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/weather_sample/";
@@ -73,20 +84,25 @@ static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/wea
     NSDictionary *params = @{@"lat":[NSNumber numberWithDouble:location.coordinate.latitude],
                              @"lon":[NSNumber numberWithDouble:location.coordinate.longitude],
                              @"cnt":[NSNumber numberWithInt:0]};
+    
     [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *resoult = (NSDictionary *)responseObject;
-        NSLog(@"json : %@",responseObject);
-        
-        [self updateUI:resoult location:location];
+        //NSLog(@"json : %@",responseObject);
+        [self updateUI:resoult];
         
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"获取天气失败");
+            NSLog(@"网络连接失败");
+            self.labelLoading.text = @"网络连接失败";
     }];
 }
 
 
-- (void)updateUI:(NSDictionary*)info location:(CLLocation *)location
+- (void)updateUI:(NSDictionary*)info
 {
+    self.labelLoading.text = @"";
+    self.loading.hidden = true;
+    [self.loading stopAnimating];
+    
     if (info) {
         if (info[@"main"]) {
             if (info[@"main"][@"temp"]) {
@@ -100,7 +116,7 @@ static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/wea
         }
     }
     
-    NSLog(@"in mothd updateUI");
+    self.labelLoading.text = @"天气信息不可用";
 }
 
 - (void)updateWeatherIcon:(NSArray *)weathers
@@ -189,6 +205,16 @@ static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/wea
             self.iconImage.image = [UIImage imageNamed: @"dunno"];
         }
     }
+}
+
+//获取定位失败
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"%@", error);
+    self.labelLoading.text = @"获取定位失败";
+    self.temperature.text = @"";
+    self.place.text = @"";
+    
 }
 
 - (void)didReceiveMemoryWarning {
