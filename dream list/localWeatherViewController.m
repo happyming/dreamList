@@ -1,18 +1,15 @@
 //
-//  ViewController.m
-//  testweather
+//  weatherViewController.m
+//  dream list
 //
-//  Created by 光明 徐 on 14/12/27.
-//  Copyright (c) 2014年 Guangming Xu. All rights reserved.
+//  Created by 光明 徐 on 15/1/27.
+//  Copyright (c) 2015年 Guangming Xu. All rights reserved.
 //
-
-#import "weatherViewController.h"
+#import "localWeatherViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <AFNetworking/AFNetworking.h>
 
-
-
-@interface weatherViewController () <CLLocationManagerDelegate>
+@interface localWeatherViewController () <CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *place;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
@@ -25,7 +22,7 @@
 
 @end
 
-@implementation weatherViewController
+@implementation localWeatherViewController
 
 
 - (CLLocationManager *)locationManager
@@ -90,9 +87,9 @@ static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/wea
         //NSLog(@"json : %@",responseObject);
         [self updateUI:resoult];
         
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"网络连接失败");
-            self.labelLoading.text = @"网络连接失败";
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"网络连接失败");
+        self.labelLoading.text = @"网络连接失败";
     }];
 }
 
@@ -149,7 +146,7 @@ static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/wea
         }
         else if (condition < 700) {
             self.iconImage.image = [UIImage imageNamed: @"snow4"];
-
+            
         }
         
         else if (condition < 771) {
@@ -169,7 +166,7 @@ static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/wea
         else if (condition == 800)
         {
             if (isNight) {
-                 self.iconImage.image = [UIImage imageNamed: @"sunny_night"];
+                self.iconImage.image = [UIImage imageNamed: @"sunny_night"];
             }
             else {
                 self.iconImage.image = [UIImage imageNamed: @"sunny"];
@@ -221,4 +218,5 @@ static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/wea
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 @end

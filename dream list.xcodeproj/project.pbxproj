@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA384BD21A508BD3006233D7 /* weatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA384BD11A508BD3006233D7 /* weatherViewController.m */; };
+		EA0108301A76B9B700D72467 /* addDreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA01082F1A76B9B700D72467 /* addDreamViewController.m */; };
 		EA4792C21A508D1700EE4EA3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4792C11A508D1700EE4EA3 /* CoreLocation.framework */; };
 		EA4792D61A508D5100EE4EA3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4792C41A508D5100EE4EA3 /* background.png */; };
 		EA4792D71A508D5100EE4EA3 /* background_summer.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4792C51A508D5100EE4EA3 /* background_summer.png */; };
@@ -27,6 +27,7 @@
 		EA4792E51A508D5100EE4EA3 /* tstorm1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4792D31A508D5100EE4EA3 /* tstorm1.png */; };
 		EA4792E61A508D5100EE4EA3 /* tstorm1_night.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4792D41A508D5100EE4EA3 /* tstorm1_night.png */; };
 		EA4792E71A508D5100EE4EA3 /* tstorm3.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4792D51A508D5100EE4EA3 /* tstorm3.png */; };
+		EA726B491A76D2FD00AB3F8D /* localWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA726B481A76D2FD00AB3F8D /* localWeatherViewController.m */; };
 		EAB812151A506F1900B97B1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB812141A506F1900B97B1F /* main.m */; };
 		EAB812181A506F1900B97B1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB812171A506F1900B97B1F /* AppDelegate.m */; };
 		EAB812211A506F1900B97B1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB8121F1A506F1900B97B1F /* Main.storyboard */; };
@@ -51,8 +52,8 @@
 		6B8670E0EE144D1039B0EC53 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		75EDE28805C1C1715D8B39F8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C5C20EF5CAF6CA186ECE03BB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA384BD01A508BD3006233D7 /* weatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weatherViewController.h; sourceTree = "<group>"; };
-		EA384BD11A508BD3006233D7 /* weatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weatherViewController.m; sourceTree = "<group>"; };
+		EA01082E1A76B9B700D72467 /* addDreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addDreamViewController.h; sourceTree = "<group>"; };
+		EA01082F1A76B9B700D72467 /* addDreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addDreamViewController.m; sourceTree = "<group>"; };
 		EA4792C11A508D1700EE4EA3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EA4792C41A508D5100EE4EA3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EA4792C51A508D5100EE4EA3 /* background_summer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_summer.png; sourceTree = "<group>"; };
@@ -72,6 +73,8 @@
 		EA4792D31A508D5100EE4EA3 /* tstorm1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tstorm1.png; sourceTree = "<group>"; };
 		EA4792D41A508D5100EE4EA3 /* tstorm1_night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tstorm1_night.png; sourceTree = "<group>"; };
 		EA4792D51A508D5100EE4EA3 /* tstorm3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tstorm3.png; sourceTree = "<group>"; };
+		EA726B471A76D2FD00AB3F8D /* localWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = localWeatherViewController.h; sourceTree = "<group>"; };
+		EA726B481A76D2FD00AB3F8D /* localWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = localWeatherViewController.m; sourceTree = "<group>"; };
 		EAB8120F1A506F1900B97B1F /* dream list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dream list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB812131A506F1900B97B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAB812141A506F1900B97B1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,6 +128,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EA0108311A76BB0600D72467 /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				EAB8123B1A506FA800B97B1F /* dreamListViewController.h */,
+				EAB8123C1A506FA800B97B1F /* dreamListViewController.m */,
+				EA01082E1A76B9B700D72467 /* addDreamViewController.h */,
+				EA01082F1A76B9B700D72467 /* addDreamViewController.m */,
+				EA726B471A76D2FD00AB3F8D /* localWeatherViewController.h */,
+				EA726B481A76D2FD00AB3F8D /* localWeatherViewController.m */,
+			);
+			name = viewcontroller;
+			sourceTree = "<group>";
+		};
 		EA4792C31A508D5100EE4EA3 /* image */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,13 +189,8 @@
 		EAB812111A506F1900B97B1F /* dream list */ = {
 			isa = PBXGroup;
 			children = (
+				EA0108311A76BB0600D72467 /* viewcontroller */,
 				EA4792C31A508D5100EE4EA3 /* image */,
-				EAB812161A506F1900B97B1F /* AppDelegate.h */,
-				EAB812171A506F1900B97B1F /* AppDelegate.m */,
-				EA384BD01A508BD3006233D7 /* weatherViewController.h */,
-				EA384BD11A508BD3006233D7 /* weatherViewController.m */,
-				EAB8123B1A506FA800B97B1F /* dreamListViewController.h */,
-				EAB8123C1A506FA800B97B1F /* dreamListViewController.m */,
 				EAB8121F1A506F1900B97B1F /* Main.storyboard */,
 				EAB812221A506F1900B97B1F /* Images.xcassets */,
 				EAB812241A506F1900B97B1F /* LaunchScreen.xib */,
@@ -191,6 +202,8 @@
 		EAB812121A506F1900B97B1F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EAB812171A506F1900B97B1F /* AppDelegate.m */,
+				EAB812161A506F1900B97B1F /* AppDelegate.h */,
 				EAB812131A506F1900B97B1F /* Info.plist */,
 				EAB812141A506F1900B97B1F /* main.m */,
 			);
@@ -369,8 +382,9 @@
 			files = (
 				EAB812181A506F1900B97B1F /* AppDelegate.m in Sources */,
 				EAB8123D1A506FA800B97B1F /* dreamListViewController.m in Sources */,
+				EA726B491A76D2FD00AB3F8D /* localWeatherViewController.m in Sources */,
 				EAB812151A506F1900B97B1F /* main.m in Sources */,
-				EA384BD21A508BD3006233D7 /* weatherViewController.m in Sources */,
+				EA0108301A76B9B700D72467 /* addDreamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

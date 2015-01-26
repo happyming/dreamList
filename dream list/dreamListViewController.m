@@ -53,7 +53,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"list" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"dreamList" forIndexPath:indexPath];
     
     // Configure the cell...
     cell.textLabel.text = self.stringlist[indexPath.row];
@@ -81,6 +81,11 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         
     }
+}
+
+- (IBAction)unwindList:(UIStoryboardSegue *)sender
+{
+    
 }
 
 
