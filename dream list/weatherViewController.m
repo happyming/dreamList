@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 Guangming Xu. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "weatherViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <AFNetworking/AFNetworking.h>
 
 
 
-@interface ViewController () <CLLocationManagerDelegate>
+@interface weatherViewController () <CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *place;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation ViewController
+@implementation weatherViewController
 
 
 - (CLLocationManager *)locationManager

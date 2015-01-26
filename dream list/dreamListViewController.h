@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface thridviewcontroller : UITableViewController
+@interface dreamListViewController : UITableViewController
 
 @end

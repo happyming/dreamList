@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA384BD21A508BD3006233D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA384BD11A508BD3006233D7 /* ViewController.m */; };
+		EA384BD21A508BD3006233D7 /* weatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA384BD11A508BD3006233D7 /* weatherViewController.m */; };
 		EA4792C21A508D1700EE4EA3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4792C11A508D1700EE4EA3 /* CoreLocation.framework */; };
 		EA4792D61A508D5100EE4EA3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4792C41A508D5100EE4EA3 /* background.png */; };
 		EA4792D71A508D5100EE4EA3 /* background_summer.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4792C51A508D5100EE4EA3 /* background_summer.png */; };
@@ -33,7 +33,7 @@
 		EAB812231A506F1900B97B1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB812221A506F1900B97B1F /* Images.xcassets */; };
 		EAB812261A506F1900B97B1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB812241A506F1900B97B1F /* LaunchScreen.xib */; };
 		EAB812321A506F1900B97B1F /* dream_listTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB812311A506F1900B97B1F /* dream_listTests.m */; };
-		EAB8123D1A506FA800B97B1F /* thridviewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB8123C1A506FA800B97B1F /* thridviewcontroller.m */; };
+		EAB8123D1A506FA800B97B1F /* dreamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB8123C1A506FA800B97B1F /* dreamListViewController.m */; };
 		FD55D739917F4205177A1886 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C20EF5CAF6CA186ECE03BB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +51,8 @@
 		6B8670E0EE144D1039B0EC53 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		75EDE28805C1C1715D8B39F8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C5C20EF5CAF6CA186ECE03BB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA384BD01A508BD3006233D7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EA384BD11A508BD3006233D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA384BD01A508BD3006233D7 /* weatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weatherViewController.h; sourceTree = "<group>"; };
+		EA384BD11A508BD3006233D7 /* weatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weatherViewController.m; sourceTree = "<group>"; };
 		EA4792C11A508D1700EE4EA3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EA4792C41A508D5100EE4EA3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EA4792C51A508D5100EE4EA3 /* background_summer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_summer.png; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		EAB8122B1A506F1900B97B1F /* dream listTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dream listTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB812301A506F1900B97B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAB812311A506F1900B97B1F /* dream_listTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dream_listTests.m; sourceTree = "<group>"; };
-		EAB8123B1A506FA800B97B1F /* thridviewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thridviewcontroller.h; sourceTree = "<group>"; };
-		EAB8123C1A506FA800B97B1F /* thridviewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thridviewcontroller.m; sourceTree = "<group>"; };
+		EAB8123B1A506FA800B97B1F /* dreamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dreamListViewController.h; sourceTree = "<group>"; };
+		EAB8123C1A506FA800B97B1F /* dreamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dreamListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,10 +176,10 @@
 				EA4792C31A508D5100EE4EA3 /* image */,
 				EAB812161A506F1900B97B1F /* AppDelegate.h */,
 				EAB812171A506F1900B97B1F /* AppDelegate.m */,
-				EA384BD01A508BD3006233D7 /* ViewController.h */,
-				EA384BD11A508BD3006233D7 /* ViewController.m */,
-				EAB8123B1A506FA800B97B1F /* thridviewcontroller.h */,
-				EAB8123C1A506FA800B97B1F /* thridviewcontroller.m */,
+				EA384BD01A508BD3006233D7 /* weatherViewController.h */,
+				EA384BD11A508BD3006233D7 /* weatherViewController.m */,
+				EAB8123B1A506FA800B97B1F /* dreamListViewController.h */,
+				EAB8123C1A506FA800B97B1F /* dreamListViewController.m */,
 				EAB8121F1A506F1900B97B1F /* Main.storyboard */,
 				EAB812221A506F1900B97B1F /* Images.xcassets */,
 				EAB812241A506F1900B97B1F /* LaunchScreen.xib */,
@@ -368,9 +368,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAB812181A506F1900B97B1F /* AppDelegate.m in Sources */,
-				EAB8123D1A506FA800B97B1F /* thridviewcontroller.m in Sources */,
+				EAB8123D1A506FA800B97B1F /* dreamListViewController.m in Sources */,
 				EAB812151A506F1900B97B1F /* main.m in Sources */,
-				EA384BD21A508BD3006233D7 /* ViewController.m in Sources */,
+				EA384BD21A508BD3006233D7 /* weatherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

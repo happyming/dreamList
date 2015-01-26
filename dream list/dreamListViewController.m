@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 Guangming Xu. All rights reserved.
 //
 
-#import "thridviewcontroller.h"
+#import "dreamListViewController.h"
 
-@interface thridviewcontroller ()
+@interface dreamListViewController ()
 @property (nonatomic, strong) NSMutableArray *stringlist;
 @end
 
-@implementation thridviewcontroller
+@implementation dreamListViewController
 
 - (NSMutableArray *)stringlist
 {
