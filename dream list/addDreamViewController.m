@@ -8,6 +8,7 @@
 
 #import "addDreamViewController.h"
 
+
 @interface addDreamViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *anewDreamTextField;
@@ -33,14 +34,22 @@
     return YES;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if (self.saveItem != sender) {
+        return;
+    }
+    if (self.anewDreamTextField.text.length > 0) {
+        self.aNewDream  = [[dreamItem alloc] init];
+        self.aNewDream.dreamName = self.anewDreamTextField.text;
+        self.aNewDream.completed = NO;
+    }
 }
-*/
+
 
 @end

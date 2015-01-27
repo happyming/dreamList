@@ -28,6 +28,7 @@
 		EA4792E61A508D5100EE4EA3 /* tstorm1_night.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4792D41A508D5100EE4EA3 /* tstorm1_night.png */; };
 		EA4792E71A508D5100EE4EA3 /* tstorm3.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4792D51A508D5100EE4EA3 /* tstorm3.png */; };
 		EA726B491A76D2FD00AB3F8D /* localWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA726B481A76D2FD00AB3F8D /* localWeatherViewController.m */; };
+		EA726B4D1A780ADB00AB3F8D /* dreamItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EA726B4C1A780ADB00AB3F8D /* dreamItem.m */; };
 		EAB812151A506F1900B97B1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB812141A506F1900B97B1F /* main.m */; };
 		EAB812181A506F1900B97B1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB812171A506F1900B97B1F /* AppDelegate.m */; };
 		EAB812211A506F1900B97B1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB8121F1A506F1900B97B1F /* Main.storyboard */; };
@@ -75,6 +76,8 @@
 		EA4792D51A508D5100EE4EA3 /* tstorm3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tstorm3.png; sourceTree = "<group>"; };
 		EA726B471A76D2FD00AB3F8D /* localWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = localWeatherViewController.h; sourceTree = "<group>"; };
 		EA726B481A76D2FD00AB3F8D /* localWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = localWeatherViewController.m; sourceTree = "<group>"; };
+		EA726B4B1A780ADB00AB3F8D /* dreamItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dreamItem.h; sourceTree = "<group>"; };
+		EA726B4C1A780ADB00AB3F8D /* dreamItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dreamItem.m; sourceTree = "<group>"; };
 		EAB8120F1A506F1900B97B1F /* dream list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dream list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB812131A506F1900B97B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAB812141A506F1900B97B1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -166,6 +169,15 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		EA726B4A1A780AB800AB3F8D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EA726B4B1A780ADB00AB3F8D /* dreamItem.h */,
+				EA726B4C1A780ADB00AB3F8D /* dreamItem.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		EAB812061A506F1900B97B1F = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +201,7 @@
 		EAB812111A506F1900B97B1F /* dream list */ = {
 			isa = PBXGroup;
 			children = (
+				EA726B4A1A780AB800AB3F8D /* model */,
 				EA0108311A76BB0600D72467 /* viewcontroller */,
 				EA4792C31A508D5100EE4EA3 /* image */,
 				EAB8121F1A506F1900B97B1F /* Main.storyboard */,
@@ -382,6 +395,7 @@
 			files = (
 				EAB812181A506F1900B97B1F /* AppDelegate.m in Sources */,
 				EAB8123D1A506FA800B97B1F /* dreamListViewController.m in Sources */,
+				EA726B4D1A780ADB00AB3F8D /* dreamItem.m in Sources */,
 				EA726B491A76D2FD00AB3F8D /* localWeatherViewController.m in Sources */,
 				EAB812151A506F1900B97B1F /* main.m in Sources */,
 				EA0108301A76B9B700D72467 /* addDreamViewController.m in Sources */,

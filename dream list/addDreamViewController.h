@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "dreamItem.h"
 
 @interface addDreamViewController : UIViewController
+
+@property (nonatomic, strong) dreamItem* aNewDream;
 
 @end

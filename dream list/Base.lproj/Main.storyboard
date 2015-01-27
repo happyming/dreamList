@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Dream List View Controller-->
+        <!--愿望清单-->
         <scene sceneID="PDD-OH-U4X">
             <objects>
                 <tableViewController id="WY2-HI-NMg" customClass="dreamListViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dreamList" textLabel="eBW-No-yom" style="IBUITableViewCellStyleDefault" id="FkP-yv-LVG">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dreamList" textLabel="eBW-No-yom" style="IBUITableViewCellStyleDefault" id="FkP-yv-LVG">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FkP-yv-LVG" id="OKm-SH-sXG">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -34,7 +34,7 @@
                             <outlet property="delegate" destination="WY2-HI-NMg" id="Ed9-lv-q3y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="GFd-k9-coo">
+                    <navigationItem key="navigationItem" title="愿望清单" id="GFd-k9-coo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f9N-kB-nhg">
                             <connections>
                                 <segue destination="2wF-ZU-QvR" kind="presentation" id="gt9-l5-nts"/>
@@ -78,15 +78,19 @@
                     <navigationItem key="navigationItem" id="Sat-Cc-7cV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="byO-pF-4sa">
                             <connections>
-                                <segue destination="LZW-0d-vkz" kind="unwind" unwindAction="unwindList:" id="luK-Ls-JPz"/>
+                                <segue destination="LZW-0d-vkz" kind="unwind" identifier="unwindCancelToList" unwindAction="unwindList:" id="ZW8-d8-Jik"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="nYW-kk-Vkn">
                             <connections>
-                                <segue destination="LZW-0d-vkz" kind="unwind" unwindAction="unwindList:" id="XGj-wD-ewG"/>
+                                <segue destination="LZW-0d-vkz" kind="unwind" unwindAction="unwindList:" id="wB2-rr-izZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="anewDreamTextField" destination="CPi-Qn-2ZZ" id="Nzv-TZ-jE0"/>
+                        <outlet property="saveItem" destination="nYW-kk-Vkn" id="7Ix-C0-Jbg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxQ-wq-phd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LZW-0d-vkz" userLabel="Exit" sceneMemberID="exit"/>
@@ -149,7 +153,7 @@
                                     <constraint firstAttribute="width" constant="220" id="nkQ-HD-nWX"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shanghai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ih-jP-f1r">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ih-jP-f1r">
                                 <rect key="frame" x="222" y="20" width="157" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="157" id="Lbf-zM-QUt"/>
@@ -159,7 +163,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="温度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2B-1r-e24">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2B-1r-e24">
                                 <rect key="frame" x="223" y="432" width="154" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="154" id="kCq-4s-SKi"/>
