@@ -11,6 +11,6 @@
 @interface dreamItem : NSObject
 
 @property (nonatomic, strong) NSString *dreamName;
-@property (nonatomic) BOOL completed;
+@property (nonatomic, strong) NSString *dreamDetail;
 
 @end

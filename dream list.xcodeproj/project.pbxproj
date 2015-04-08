@@ -36,6 +36,7 @@
 		EAB812261A506F1900B97B1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB812241A506F1900B97B1F /* LaunchScreen.xib */; };
 		EAB812321A506F1900B97B1F /* dream_listTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB812311A506F1900B97B1F /* dream_listTests.m */; };
 		EAB8123D1A506FA800B97B1F /* dreamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB8123C1A506FA800B97B1F /* dreamListViewController.m */; };
+		EAC8CB0C1AAFE13000F12A2B /* dreamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8CB0B1AAFE13000F12A2B /* dreamDetailViewController.m */; };
 		FD55D739917F4205177A1886 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C20EF5CAF6CA186ECE03BB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		EAB812311A506F1900B97B1F /* dream_listTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dream_listTests.m; sourceTree = "<group>"; };
 		EAB8123B1A506FA800B97B1F /* dreamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dreamListViewController.h; sourceTree = "<group>"; };
 		EAB8123C1A506FA800B97B1F /* dreamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dreamListViewController.m; sourceTree = "<group>"; };
+		EAC8CB0A1AAFE13000F12A2B /* dreamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dreamDetailViewController.h; sourceTree = "<group>"; };
+		EAC8CB0B1AAFE13000F12A2B /* dreamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dreamDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 				EA0108311A76BB0600D72467 /* viewcontroller */,
 				EA4792C31A508D5100EE4EA3 /* image */,
 				EAB8121F1A506F1900B97B1F /* Main.storyboard */,
+				EAC8CB0A1AAFE13000F12A2B /* dreamDetailViewController.h */,
+				EAC8CB0B1AAFE13000F12A2B /* dreamDetailViewController.m */,
 				EAB812221A506F1900B97B1F /* Images.xcassets */,
 				EAB812241A506F1900B97B1F /* LaunchScreen.xib */,
 				EAB812121A506F1900B97B1F /* Supporting Files */,
@@ -398,6 +403,7 @@
 				EA726B4D1A780ADB00AB3F8D /* dreamItem.m in Sources */,
 				EA726B491A76D2FD00AB3F8D /* localWeatherViewController.m in Sources */,
 				EAB812151A506F1900B97B1F /* main.m in Sources */,
+				EAC8CB0C1AAFE13000F12A2B /* dreamDetailViewController.m in Sources */,
 				EA0108301A76B9B700D72467 /* addDreamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

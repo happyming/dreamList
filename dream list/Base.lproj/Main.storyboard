@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="miX-kk-iXc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="miX-kk-iXc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -27,6 +27,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="jYG-VT-pbr" kind="show" id="Cu2-H5-B5S"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,6 +49,37 @@
             </objects>
             <point key="canvasLocation" x="5923" y="-387"/>
         </scene>
+        <!--Dream Detail View Controller-->
+        <scene sceneID="hm3-fQ-Rzm">
+            <objects>
+                <viewController id="jYG-VT-pbr" customClass="dreamDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bjm-Q1-kNz"/>
+                        <viewControllerLayoutGuide type="bottom" id="1zV-mV-Sh8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bbO-bf-yqm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28H-VE-ud5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FUL-ah-JvU"/>
+                    <connections>
+                        <outlet property="detailView" destination="28H-VE-ud5" id="etw-uz-64x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAk-Ph-aPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5923" y="307"/>
+        </scene>
         <!--Add Dream View Controller-->
         <scene sceneID="Nb4-79-vyl">
             <objects>
@@ -58,21 +92,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="想要添加的愿望" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPi-Qn-2ZZ">
-                                <rect key="frame" x="16" y="285" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入需要添加的愿望" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RC5-4t-Qae">
+                                <rect key="frame" x="16" y="114" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="HGF-yE-Si3" id="1qc-wZ-21x"/>
-                                </connections>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="内容" translatesAutoresizingMaskIntoConstraints="NO" id="Max-TZ-Twc">
+                                <rect key="frame" x="16" y="152" width="568" height="212"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CPi-Qn-2ZZ" firstAttribute="leading" secondItem="dzg-bq-AGK" secondAttribute="leadingMargin" id="4ua-7W-2Zp"/>
-                            <constraint firstAttribute="centerY" secondItem="CPi-Qn-2ZZ" secondAttribute="centerY" id="ZDJ-UZ-PM3"/>
-                            <constraint firstItem="CPi-Qn-2ZZ" firstAttribute="trailing" secondItem="dzg-bq-AGK" secondAttribute="trailingMargin" id="lj9-oc-rxr"/>
-                            <constraint firstAttribute="centerX" secondItem="CPi-Qn-2ZZ" secondAttribute="centerX" id="tPo-Gy-Jg2"/>
+                            <constraint firstItem="7Hx-RF-xce" firstAttribute="top" secondItem="Max-TZ-Twc" secondAttribute="bottom" constant="236" id="F0c-T0-Rw7"/>
+                            <constraint firstItem="Max-TZ-Twc" firstAttribute="trailing" secondItem="dzg-bq-AGK" secondAttribute="trailingMargin" id="GgG-Kz-bWM"/>
+                            <constraint firstItem="Max-TZ-Twc" firstAttribute="leading" secondItem="dzg-bq-AGK" secondAttribute="leadingMargin" id="Mje-o5-zWe"/>
+                            <constraint firstItem="Max-TZ-Twc" firstAttribute="top" secondItem="RC5-4t-Qae" secondAttribute="bottom" constant="8" id="Mta-1T-iFK"/>
+                            <constraint firstItem="RC5-4t-Qae" firstAttribute="trailing" secondItem="dzg-bq-AGK" secondAttribute="trailingMargin" id="O8i-Uj-lhB"/>
+                            <constraint firstItem="RC5-4t-Qae" firstAttribute="leading" secondItem="dzg-bq-AGK" secondAttribute="leadingMargin" id="Rfg-eA-bEE"/>
+                            <constraint firstItem="RC5-4t-Qae" firstAttribute="top" secondItem="KrI-zV-cy0" secondAttribute="bottom" constant="50" id="Y2h-Ry-gfD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sat-Cc-7cV">
@@ -88,14 +128,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="anewDreamTextField" destination="CPi-Qn-2ZZ" id="Nzv-TZ-jE0"/>
+                        <outlet property="anewDreamTextField" destination="RC5-4t-Qae" id="cgm-zk-cSo"/>
+                        <outlet property="dreamDetailTV" destination="Max-TZ-Twc" id="SvP-pq-mwp"/>
                         <outlet property="saveItem" destination="nYW-kk-Vkn" id="7Ix-C0-Jbg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxQ-wq-phd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LZW-0d-vkz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7410" y="-387"/>
+            <point key="canvasLocation" x="7404" y="-387"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0sV-QA-dzb">

@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *anewDreamTextField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveItem;
+@property (weak, nonatomic) IBOutlet UITextView *dreamDetailTV;
 
 @end
 
@@ -20,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dreamDetailTV.text = @"";
     // Do any additional setup after loading the view.
 }
 
@@ -47,7 +49,6 @@
     if (self.anewDreamTextField.text.length > 0) {
         self.aNewDream  = [[dreamItem alloc] init];
         self.aNewDream.dreamName = self.anewDreamTextField.text;
-        self.aNewDream.completed = NO;
     }
 }
 

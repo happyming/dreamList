@@ -68,11 +68,7 @@
     // Configure the cell...
     dreamItem *item = self.dreamList[indexPath.row];
     cell.textLabel.text = item.dreamName;
-    if (item.completed) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
+    
     return cell;
 }
 
@@ -80,13 +76,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    dreamItem *tappedItem = [self.dreamList objectAtIndex:indexPath.row];
-    tappedItem.completed = !tappedItem.completed;
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 
-// Override to support conditional editing of the table view.
+// Override to support condtitional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
